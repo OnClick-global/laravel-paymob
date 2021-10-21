@@ -143,8 +143,12 @@ class PayMob
           $token,
           $amount_cents,
           $order_id,
-          $name   = 'null',
-          $phone   = 'null'
+          $email   = 'null',
+          $fname   = 'null',
+          $lname   = 'null',
+          $phone   = 'null',
+          $city    = 'null',
+          $country = 'null'
       ) {
         // Request body
         $json = [
@@ -152,12 +156,12 @@ class PayMob
             'expiration'   => 36000,
             'order_id'     => $order_id,
             "billing_data" => [
-                "email"        => 'null',
-                "first_name"   => $name,
-                "last_name"    => 'null',
+                "email"        => $email,
+                "first_name"   => $fname,
+                "last_name"    => $lname,
                 "phone_number" => $phone,
-                "city"         => 'null',
-                "country"      => 'null',
+                "city"         => $city,
+                "country"      => $country,
                 'street'       => 'null',
                 'building'     => 'null',
                 'floor'        => 'null',
