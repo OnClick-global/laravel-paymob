@@ -143,12 +143,8 @@ class PayMob
           $token,
           $amount_cents,
           $order_id,
-          $email   = 'null',
-          $fname   = 'null',
-          $lname   = 'null',
-          $phone   = 'null',
-          $city    = 'null',
-          $country = 'null'
+          $name   = 'null',
+          $phone   = 'null'
       ) {
         // Request body
         $json = [
@@ -157,7 +153,7 @@ class PayMob
             'order_id'     => $order_id,
             "billing_data" => [
                 "email"        => 'null',
-                "first_name"   => $fname,
+                "first_name"   => $name,
                 "last_name"    => 'null',
                 "phone_number" => $phone,
                 "city"         => 'null',
